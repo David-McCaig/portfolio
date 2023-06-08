@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import design from "../../public/design.png";
 import Image from "next/image";
 import SkillsTag from './SkillsTag';
@@ -9,13 +9,15 @@ import {
 } from "react-icons/ai";
 
 function ProjectCard({ image, title, description, children, liveLink, gitHubFront, gitHubBack }) {
+
+
     return (
 
-                <div className="text-center shadow-xl p-4 rounded-xl my-10 dark:bg-white flex-1 xl:flex border-solid border-2 border-slate-50">
-                    <div className="xl:w-2/3 mlax-w-2x xl:flex items-center">
+                <div className="text-center shadow-xl p-4 rounded-xl my-10 dark:bg-white flex-1 2xl:flex border-solid border-2 border-slate-50">
+                    <div className="2xl:w-2/3 mlax-w-2x 2xl:flex items-center">
                         <Image src={image} />
                     </div>
-                    <div className="xl:w-2/3">
+                    <div className="2xl:w-2/3">
                         <h3 className="text-2xl font-semibold pt-8 pb-2 tracking-widest">
                             {title}
                         </h3>

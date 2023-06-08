@@ -13,7 +13,7 @@ function NavBar({setDarkMode}) {
 
   return (
     <>
-    <nav className="pt-8 dark:text-white">
+    <nav className="pt-2 mb-10 dark:text-white">
     <div className="flex backdrop-blur-sm space-x-3 md:space-x-16 bg-white opacity-80  border-2 border-slate-100 rounded-full items-center pr-8 pl-8 h-14 dark:bg-black dark:border-2 dark:border-black ">
     <a>About Me</a>
     <a>Projects</a>
