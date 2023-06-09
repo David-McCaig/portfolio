@@ -20,14 +20,15 @@ import partsBin from "../public/Frame 1.png"
 import BrainFlix from "../public/brain-flix.png"
 
 import SkillsTag from "./Components/SkillsTag";
-import ProjectCard from "./Components/ProjectCard"
-import NavBar from "./Components/NavBar"
+import ProjectCard from "./Components/ProjectCard";
+import NavBar from "./Components/NavBar";
+import ContactForm from "./Components/ContactForm";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const [showNavbar, setShowNavbar] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,9 +50,6 @@ export default function Home() {
     };
   }, [prevScrollPos]);
 
- 
-console.log(window.scrollY)
-
   return (
     
     <div className={darkMode ? "dark" : ""}>
@@ -64,12 +62,12 @@ console.log(window.scrollY)
       <NavBar setDarkMode={setDarkMode}/>
       </div>
       <div className=""></div>
-      <main className=" bg-white px-10 dark:bg-gray-900 md:px-40 lg:px-40 xl:px-96 ">
+      <main className=" bg-stone-50 px-10 dark:bg-gray-900 md:px-40 lg:px-40 xl:px-96">
 
         <section className="min-h-screen">
           
           <div className="text-center p-10 py-10">
-            <h2 className="text-5xl py-2 pt-32 text-emerald-500 font-medium dark:text-emerald-400 md:text-6xl">
+            <h2 className="text-5xl py-2 pt-32 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl"> 
               David McCaig
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
@@ -78,7 +76,7 @@ console.log(window.scrollY)
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               I&#39;m a Full-Stack Developer with a love for creating beautiful UI and user-friendly applications.
             </p>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+            <div className="text-5xl flex justify-center gap-16 py-3  text-gray-600 dark:text-gray-400">
               <a href="https://www.linkedin.com/in/david-mccaig/" target="_blank" rel="noreferrer">
                 <AiFillLinkedin />
               </a>
@@ -208,6 +206,40 @@ console.log(window.scrollY)
               <SkillsTag skill={'Express.JS'} />
               <SkillsTag skill={'MYSQL'} />
             </ProjectCard>
+
+            <ProjectCard 
+            image={BrainFlix} 
+            title={'InStock'} 
+            description={'Instock is a warehouse and inventory management system that was built in a week by a team of four developers using Agile work flows (Jira) and GitFlow. Every morning we would have a stand-up to mimic a work environment. I really enjoyed working with Jira, gitFLow and Scrum methodologies. It really allowed us to take a project that felt daunting at the time and break it down into more manageable bite sized pieces. Instock is a fully responsive full-stack web application.'}
+            liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
+            gitHubFront={'https://github.com/David-McCaig/instock-client'} 
+            gitHubBack={'https://github.com/David-McCaig/instock-api'}
+            >
+              <SkillsTag skill={'HTML'} />
+              <SkillsTag skill={'Javascript'} />
+              <SkillsTag skill={'React'} />
+              <SkillsTag skill={'SASS'} />
+              <SkillsTag skill={'Node.JS'} />
+              <SkillsTag skill={'Express.JS'} />
+              <SkillsTag skill={'MYSQL'} />
+            </ProjectCard>
+
+            <ProjectCard 
+            image={BrainFlix} 
+            title={'Get Out'} 
+            description={'During a 24-hour Hackathon at the Brainstation Web Development Bootcamp, our team, composed of two UX designers, one Data Scientist, and two Web Developers, set out to revamp LoyaltyOne&#39s Air Miles reward program for Millennials and Gen Z. Our solution? An engaging application that gamifies the experience using a star balance to track progress. We made earning and redeeming points a breeze with a user-friendly digital wallet earning us 2nd place in the competition.If you&#39d like to check out our project, please make sure to view it in a width of 390px for the best experience.'}
+            liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
+            gitHubFront={'https://github.com/David-McCaig/instock-client'} 
+            gitHubBack={'https://github.com/David-McCaig/instock-api'}
+            >
+              <SkillsTag skill={'React.JS'} />
+              <SkillsTag skill={'Javascript'} />
+              <SkillsTag skill={'HTML'} />
+              <SkillsTag skill={'CSS'} />
+              <SkillsTag skill={'SASS'} />
+            </ProjectCard>
+
+            <ContactForm/>
 
             {/* <div className="basis-2/3 flex-1 ">
               <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
