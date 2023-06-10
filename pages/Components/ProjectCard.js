@@ -13,39 +13,39 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
 
     return (
 
-                <div className="text-center shadow-xl p-4 rounded-xl my-10 dark:bg-white flex-1 2xl:flex border-solid border-2 border-slate-50">
-                    <div className="2xl:w-2/3 mlax-w-2x 2xl:flex items-center">
-                        <Image src={image} />
+        <div className="text-center shadow-xl m-4 rounded-xl my-10 dark:bg-white flex-1 xl:flex ">
+            <div className="xl:w-2/3 mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]">
+                <Image className='rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]' src={image} />
+            </div>
+            <div className="xl:w-2/3 px-4 md:px-12 flex flex-col xl:justify-center">
+                <h3 className="text-xl font-semibold pt-8 pb-2 tracking-widest">
+                    {title}
+                </h3>
+                <p className="py-2 text-sm md:text-base">
+                    {description}
+                </p>
+                <div>
+                    <div className=" text-5xl flex justify-center gap-2 sm:gap-6 py-3 font-semibold text-gray-600  ">
+                        <a className='mr-1' href={liveLink} target="_blank" rel="noreferrer">
+                            <AiFillIeCircle />
+                            <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'> Live </p>
+                        </a>
+                        <a href={gitHubFront} target="_blank" rel="noreferrer">
+                            <AiFillGithub className='ml-2 ' />
+                            <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'>Front-End</p>
+                        </a>
+                        <a href={gitHubBack} target="_blank" rel="noreferrer">
+                            <AiFillGithub className='ml-2' />
+                            <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'>Back-End</p>
+                        </a>
                     </div>
-                    <div className="2xl:w-2/3">
-                        <h3 className="text-2xl font-semibold pt-8 pb-2 tracking-widest">
-                            {title}
-                        </h3>
-                        <p className="py-2">
-                            {description}
-                        </p>
-                        <div>
-                            <div className="text-5xl flex justify-center gap-6 py-3 font-semibold text-gray-600  ">
-                                <a className='mr-1' href={liveLink} target="_blank" rel="noreferrer">
-                                    <AiFillIeCircle />
-                                    <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'> Live </p>
-                                </a>
-                                <a href={gitHubFront} target="_blank" rel="noreferrer">
-                                    <AiFillGithub className='ml-2 ' />
-                                    <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'>Front-End</p>
-                                </a>
-                                <a href={gitHubBack} target="_blank" rel="noreferrer">
-                                    <AiFillGithub className='ml-2' />
-                                    <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'>Back-End</p>
-                                </a>
-                            </div>
-                            <h4 className="py-4 text-teal-600 text-2xl font-medium mt-1 pb-0">Technologies</h4>
-                            <div className="flex flex-wrap justify-center">
-                                {children}
-                            </div>
-                        </div>
+                    <h4 className="py-4 text-teal-600 text-xl font-medium mt-1 ">Technologies</h4>
+                    <div className="flex flex-wrap justify-center pb-4 md:pb-16 lg:pb-8">
+                        {children}
                     </div>
                 </div>
+            </div>
+        </div>
     )
 }
 

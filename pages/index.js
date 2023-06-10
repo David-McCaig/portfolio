@@ -16,13 +16,16 @@ import web3 from "../public/web3.png";
 import web4 from "../public/web4.png";
 import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
-import partsBin from "../public/Frame 1.png"
+import partsBin from "../public/parts-bin.png"
 import BrainFlix from "../public/brain-flix.png"
+import inStock from "../public/in-stock.png"
+import getOut from "../public/get-out.png"
 
 import SkillsTag from "./Components/SkillsTag";
 import ProjectCard from "./Components/ProjectCard";
 import NavBar from "./Components/NavBar";
 import ContactForm from "./Components/ContactForm";
+import test from "../public/original-2318e0505fd14e368d00c6ee584788c5.webp"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -62,7 +65,7 @@ export default function Home() {
       <NavBar setDarkMode={setDarkMode}/>
       </div>
       <div className=""></div>
-      <main className=" bg-stone-50 px-10 dark:bg-gray-900 md:px-40 lg:px-40 xl:px-96">
+      <main className=" bg-stone-50 px-10 dark:bg-gray-900 md:px-40 lg:px-32 xl:px-24 2xl:px-44">
 
         <section className="min-h-screen">
           
@@ -208,7 +211,7 @@ export default function Home() {
             </ProjectCard>
 
             <ProjectCard 
-            image={BrainFlix} 
+            image={inStock} 
             title={'InStock'} 
             description={'Instock is a warehouse and inventory management system that was built in a week by a team of four developers using Agile work flows (Jira) and GitFlow. Every morning we would have a stand-up to mimic a work environment. I really enjoyed working with Jira, gitFLow and Scrum methodologies. It really allowed us to take a project that felt daunting at the time and break it down into more manageable bite sized pieces. Instock is a fully responsive full-stack web application.'}
             liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
@@ -225,9 +228,9 @@ export default function Home() {
             </ProjectCard>
 
             <ProjectCard 
-            image={BrainFlix} 
+            image={getOut} 
             title={'Get Out'} 
-            description={'During a 24-hour Hackathon at the Brainstation Web Development Bootcamp, our team, composed of two UX designers, one Data Scientist, and two Web Developers, set out to revamp LoyaltyOne&#39s Air Miles reward program for Millennials and Gen Z. Our solution? An engaging application that gamifies the experience using a star balance to track progress. We made earning and redeeming points a breeze with a user-friendly digital wallet earning us 2nd place in the competition.If you&#39d like to check out our project, please make sure to view it in a width of 390px for the best experience.'}
+            description={'During a 24-hour Hackathon at the Brainstation Web Development Bootcamp, our team, composed of two UX designers, one Data Scientist, and two Web Developers, set out to revamp LoyaltyOne\'s Air Miles reward program for Millennials and Gen Z. Our solution? An engaging application that gamifies the experience using a star balance to track progress. We made earning and redeeming points a breeze with a user-friendly digital wallet earning us 2nd place in the competition.If you\'d like to check out our project, please make sure to view it in a width of 390px for the best experience.'}
             liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
             gitHubFront={'https://github.com/David-McCaig/instock-client'} 
             gitHubBack={'https://github.com/David-McCaig/instock-api'}
