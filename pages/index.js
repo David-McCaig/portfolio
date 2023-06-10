@@ -54,7 +54,7 @@ export default function Home() {
   }, [prevScrollPos]);
 
   return (
-    
+
     <div className={darkMode ? "dark" : ""}>
       <Head>
         <title>Create Next App</title>
@@ -62,15 +62,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`fixed w-full flex justify-center z-20 ${showNavbar ? 'duration-500 top-[0] hover:duration-500 hover:top-[0]' : 'duration-500 top-[-60px] hover:duration-500 hover:top-[0]'}`}>
-      <NavBar setDarkMode={setDarkMode}/>
+        <NavBar setDarkMode={setDarkMode} />
       </div>
       <div className=""></div>
       <main className=" bg-stone-50 px-10 dark:bg-gray-900 md:px-40 lg:px-32 xl:px-24 2xl:px-44">
 
         <section className="min-h-screen">
-          
+
           <div className="text-center p-10 py-10">
-            <h2 className="text-5xl py-2 pt-32 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl"> 
+            <h2 className="text-5xl py-2 pt-32 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl">
               David McCaig
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
@@ -175,13 +175,13 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 ">
 
-            <ProjectCard 
-            image={partsBin} 
-            title={'PartsBin'} 
-            description={'PartsBin is an online marketplace designed for mountain biking enthusiasts. Find new/used bikes and parts, enjoy a responsive UI, secure token-based authentication, and the ability to post ads. Photos are stored with Cloudinary, and a chat app using Socket.IO enables easy communication. State management is handled using React\'s Context API.'}
-            liveLink={'https://imaginative-sfogliatella-45400a.netlify.app/'}
-            gitHubFront={'https://github.com/David-McCaig/parts-bin-client'} 
-            gitHubBack={'https://github.com/David-McCaig/parts-bin-server'}
+            <ProjectCard
+              image={partsBin}
+              title={'PartsBin'}
+              description={'PartsBin is an online marketplace designed for mountain biking enthusiasts. Find new/used bikes and parts, enjoy a responsive UI, secure token-based authentication, and the ability to post ads. Photos are stored with Cloudinary, and a chat app using Socket.IO enables easy communication. State management is handled using React\'s Context API.'}
+              liveLink={'https://imaginative-sfogliatella-45400a.netlify.app/'}
+              gitHubFront={'https://github.com/David-McCaig/parts-bin-client'}
+              gitHubBack={'https://github.com/David-McCaig/parts-bin-server'}
             >
               <SkillsTag skill={'React'} />
               <SkillsTag skill={'SASS'} />
@@ -193,13 +193,13 @@ export default function Home() {
               <SkillsTag skill={'Cloudinary'} />
             </ProjectCard>
 
-            <ProjectCard 
-            image={BrainFlix} 
-            title={'BrainFlix'} 
-            description={'Brainflix is a fully responsive full-stack web application that mimics YouTube. This was one of the first React apps that I created while attending the Brainstation Software Engineering bootcamp. Some of the features include being able to select what video you would like to watch, commenting on each video and uploading a video. Initially the project was built using Express, Node and JSON data for the backend but I decided to go back and build a database using MySQL, Knex, express and node.'}
-            liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
-            gitHubFront={'https://github.com/David-McCaig/david-mccaig-brainflix'} 
-            gitHubBack={'https://github.com/David-McCaig/david-mccaig-brainflix-server'}
+            <ProjectCard
+              image={BrainFlix}
+              title={'BrainFlix'}
+              description={'Brainflix is a fully responsive full-stack web application that mimics YouTube. This was one of the first React apps that I created while attending the Brainstation Software Engineering bootcamp. Some of the features include being able to select what video you would like to watch, commenting on each video and uploading a video. Initially the project was built using Express, Node and JSON data for the backend but I decided to go back and build a database using MySQL, Knex, express and node.'}
+              liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
+              gitHubFront={'https://github.com/David-McCaig/david-mccaig-brainflix'}
+              gitHubBack={'https://github.com/David-McCaig/david-mccaig-brainflix-server'}
             >
               <SkillsTag skill={'HTML'} />
               <SkillsTag skill={'Javascript'} />
@@ -210,13 +210,13 @@ export default function Home() {
               <SkillsTag skill={'MYSQL'} />
             </ProjectCard>
 
-            <ProjectCard 
-            image={inStock} 
-            title={'InStock'} 
-            description={'Instock is a warehouse and inventory management system that was built in a week by a team of four developers using Agile work flows (Jira) and GitFlow. Every morning we would have a stand-up to mimic a work environment. I really enjoyed working with Jira, gitFLow and Scrum methodologies. It really allowed us to take a project that felt daunting at the time and break it down into more manageable bite sized pieces. Instock is a fully responsive full-stack web application.'}
-            liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
-            gitHubFront={'https://github.com/David-McCaig/instock-client'} 
-            gitHubBack={'https://github.com/David-McCaig/instock-api'}
+            <ProjectCard
+              image={inStock}
+              title={'InStock'}
+              description={'Instock is a warehouse and inventory management system that was built in a week by a team of four developers using Agile work flows (Jira) and GitFlow. Every morning we would have a stand-up to mimic a work environment. I really enjoyed working with Jira, gitFLow and Scrum methodologies. It really allowed us to take a project that felt daunting at the time and break it down into more manageable bite sized pieces. Instock is a fully responsive full-stack web application.'}
+              liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
+              gitHubFront={'https://github.com/David-McCaig/instock-client'}
+              gitHubBack={'https://github.com/David-McCaig/instock-api'}
             >
               <SkillsTag skill={'HTML'} />
               <SkillsTag skill={'Javascript'} />
@@ -227,13 +227,13 @@ export default function Home() {
               <SkillsTag skill={'MYSQL'} />
             </ProjectCard>
 
-            <ProjectCard 
-            image={getOut} 
-            title={'Get Out'} 
-            description={'During a 24-hour Hackathon at the Brainstation Web Development Bootcamp, our team, composed of two UX designers, one Data Scientist, and two Web Developers, set out to revamp LoyaltyOne\'s Air Miles reward program for Millennials and Gen Z. Our solution? An engaging application that gamifies the experience using a star balance to track progress. We made earning and redeeming points a breeze with a user-friendly digital wallet earning us 2nd place in the competition.If you\'d like to check out our project, please make sure to view it in a width of 390px for the best experience.'}
-            liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
-            gitHubFront={'https://github.com/David-McCaig/instock-client'} 
-            gitHubBack={'https://github.com/David-McCaig/instock-api'}
+            <ProjectCard
+              image={getOut}
+              title={'Get Out'}
+              description={'During a 24-hour Hackathon at the Brainstation Web Development Bootcamp, our team, composed of two UX designers, one Data Scientist, and two Web Developers, set out to revamp LoyaltyOne\'s Air Miles reward program for Millennials and Gen Z. Our solution? An engaging application that gamifies the experience using a star balance to track progress. We made earning and redeeming points a breeze with a user-friendly digital wallet earning us 2nd place in the competition.If you\'d like to check out our project, please make sure to view it in a width of 390px for the best experience.'}
+              liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
+              gitHubFront={'https://github.com/David-McCaig/instock-client'}
+              gitHubBack={'https://github.com/David-McCaig/instock-api'}
             >
               <SkillsTag skill={'React.JS'} />
               <SkillsTag skill={'Javascript'} />
@@ -241,9 +241,9 @@ export default function Home() {
               <SkillsTag skill={'CSS'} />
               <SkillsTag skill={'SASS'} />
             </ProjectCard>
-
-            <ContactForm/>
-
+            <div className="mt-24 lg:mt-44 lg:mb-24 flex justify-center ">
+              <ContactForm />
+            </div>
             {/* <div className="basis-2/3 flex-1 ">
               <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
                 <Image src={design} width={100} height={100} />
