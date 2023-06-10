@@ -4,7 +4,7 @@ import {
   AiFillGithub
 } from "react-icons/ai";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import deved from "../public/david-mccaig.png";
 import code from "../public/code.png";
 import design from "../public/design.png";
@@ -33,6 +33,10 @@ export default function Home() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  const aboutMeRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -53,6 +57,16 @@ export default function Home() {
     };
   }, [prevScrollPos]);
 
+  const handleScroll = (ref) => {
+    window.scrollTo({
+      top: ref.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+
+
   return (
 
     <div className={darkMode ? "dark" : ""}>
@@ -62,7 +76,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`fixed w-full flex justify-center z-20 ${showNavbar ? 'duration-500 top-[0] hover:duration-500 hover:top-[0]' : 'duration-500 top-[-60px] hover:duration-500 hover:top-[0]'}`}>
-        <NavBar setDarkMode={setDarkMode} />
+        <NavBar setDarkMode={setDarkMode} 
+        handleScroll={handleScroll}
+        aboutMeRef={aboutMeRef}
+        projectRef={projectRef}
+        contactRef={contactRef}
+        />
+        
       </div>
       <div className=""></div>
       <main className=" bg-stone-50 px-10 dark:bg-gray-900 md:px-40 lg:px-32 xl:px-24 2xl:px-44">
@@ -70,7 +90,7 @@ export default function Home() {
         <section className="min-h-screen">
 
           <div className="text-center p-10 py-10">
-            <h2 className="text-5xl py-2 pt-32 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl">
+            <h2 className="text-5xl py-2 pt-12 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl">
               David McCaig
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
@@ -87,12 +107,12 @@ export default function Home() {
                 <AiFillGithub />
               </a>
             </div>
-            <div className="w-40 h-40 mx-auto bg-gradient-to-b from-teal-500 rounded-full relative overflow-hidden mt-20   md:h-96 md:w-96">
+            <div ref={aboutMeRef} className="w-40 h-40 mx-auto bg-gradient-to-b from-teal-500 rounded-full relative overflow-hidden mt-20   md:h-96 md:w-96">
               <Image src={deved} alt={'project displayed'} layout="fill" objectFit="cover" />
             </div>
           </div>
         </section>
-        <section className="lg:flex">
+        <section className=" lg:flex">
           <div className="lg:w-2/3 mlax-w-2x">
             <h3 className="text-3xl py-1 text-center lg:text-left  dark:text-white ">About Me</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -169,7 +189,7 @@ export default function Home() {
             </div>
           </div> */}
 
-        <section className="py-10">
+        <section ref={projectRef} className="py-10">
           <div>
             <h3 className="text-3xl py-1 text-center dark:text-white ">Projects</h3>
           </div>
@@ -241,7 +261,7 @@ export default function Home() {
               <SkillsTag skill={'CSS'} />
               <SkillsTag skill={'SASS'} />
             </ProjectCard>
-            <div className="mt-24 lg:mt-44 lg:mb-24 flex justify-center ">
+            <div ref={contactRef} className="mt-24 lg:mt-44 lg:mb-24 flex justify-center ">
               <ContactForm />
             </div>
             {/* <div className="basis-2/3 flex-1 ">
