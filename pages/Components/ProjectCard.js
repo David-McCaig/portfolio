@@ -26,20 +26,20 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
                 </p>
                 <div>
                     <div className=" text-5xl flex justify-center gap-2 sm:gap-6 py-3 font-semibold text-gray-600  ">
-                        <a className='mr-1' href={liveLink} target="_blank" rel="noreferrer">
-                            <AiFillIeCircle />
-                            <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'> Live </p>
+                        <a className="mr-1" href={liveLink} target="_blank" rel="noreferrer">
+                            <AiFillIeCircle className="hover:text-emerald-500 transition duration-300" />
+                            <p className="text-sm mt-1 text-gray-400 dark:text-gray-600"> Live </p>
                         </a>
                         <a href={gitHubFront} target="_blank" rel="noreferrer">
-                            <AiFillGithub className='ml-2 ' />
-                            <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'>Front-End</p>
+                            <AiFillGithub className='ml-2 hover:text-emerald-500 transition duration-300' />
+                            <p className="text-sm mt-1 text-gray-400 dark:text-gray-600">Front-End</p>
                         </a>
                         <a href={gitHubBack} target="_blank" rel="noreferrer">
-                            <AiFillGithub className='ml-2' />
+                            < AiFillGithub className="ml-2 hover:text-emerald-500 transition duration-300" />
                             <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'>Back-End</p>
                         </a>
                     </div>
-                    <h4 className="py-4 text-teal-600 text-xl font-medium mt-1 ">Technologies</h4>
+                    <h4 className="py-4 text-emerald-500 text-xl font-medium mt-1 ">Technologies</h4>
                     <div className="flex flex-wrap justify-center pb-4 md:pb-16 lg:pb-8">
                         {children}
                     </div>

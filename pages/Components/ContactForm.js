@@ -64,7 +64,7 @@ const SignupForm = () => {
 
 
     return (
-        <form className="flex flex-col w-96  mb-12 lg:w-[36rem]" ref={formRef} onSubmit={formik.handleSubmit}>
+        <form className="flex flex-col w-96 lg:w-[36rem]" ref={formRef} onSubmit={formik.handleSubmit}>
             <div className='text-center'>
             <h1 className="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900 dark:text-white">Contact Me</h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 mb-4 dark:text-white">Please dont hesitate to reach out if you have any questions</p>
@@ -111,7 +111,7 @@ const SignupForm = () => {
                 <div className="text-red-500 mt-1">{formik.errors.message}</div>
             ) : null}
 
-            <button className=" bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:bg-blue-700 mt-6 text-white font-bold py-2 px-4 rounded-full" type="submit">Submit</button>            
+            <button className="transition duration-1000 bg-gradient-to-r from-green-400 to-blue-500 hover:bg-gradient-to-r hover:from-green-400 hover:to-blue-400 text-white font-bold py-2 px-4 rounded-full mt-12" type="submit">Submit</button>            
         </form>
     );
 };
