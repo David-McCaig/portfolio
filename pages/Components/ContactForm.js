@@ -66,10 +66,10 @@ const SignupForm = () => {
     return (
         <form className="flex flex-col w-96  mb-12 lg:w-[36rem]" ref={formRef} onSubmit={formik.handleSubmit}>
             <div className='text-center'>
-            <h1 className="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900">Contact Me</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 mb-4">Please dont hesitate to reach out if you have any questions</p>
+            <h1 className="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900 dark:text-white">Contact Me</h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 mb-4 dark:text-white">Please dont hesitate to reach out if you have any questions</p>
             </div>
-            <label className="mb-1 mt-5" htmlFor="user_name">Name</label>
+            <label className="mb-1 mt-5 dark:text-white" htmlFor="user_name">Name</label>
             <input
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" 
                 id="user_name"
@@ -83,7 +83,7 @@ const SignupForm = () => {
                 <div className="text-red-500 mt-1">{formik.errors.user_name}</div>
             ) : null}
             <div className="mt-6">
-                <label className="mb-1 " htmlFor="user_email">Email Address</label>
+                <label className="mb-1 dark:text-white" htmlFor="user_email">Email Address</label>
                 <input
                     className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" 
                     id="user_email"
@@ -97,7 +97,7 @@ const SignupForm = () => {
                     <div className="text-red-500 mt-1">{formik.errors.user_email}</div>
                 ) : null}
             </div>
-            <label className="mb-1 mt-6" htmlFor="message">Message</label>
+            <label className="mb-1 mt-6 dark:text-white" htmlFor="message">Message</label>
             <textarea
                 className="resize-none block p-2.5 h-20 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 id="message"
