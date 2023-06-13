@@ -7,26 +7,15 @@ import {
 
 import { useState, useEffect, useRef } from "react";
 import deved from "../public/david-mccaig.png";
-import code from "../public/code.png";
-import design from "../public/design.png";
-import consulting from "../public/consulting.png";
 import Image from "next/image";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
 import partsBin from "../public/parts-bin.png"
 import BrainFlix from "../public/brain-flix.png"
 import inStock from "../public/in-stock.png"
 import getOut from "../public/get-out.png"
-
 import SkillsTag from "./Components/SkillsTag";
 import ProjectCard from "./Components/ProjectCard";
 import NavBar from "./Components/NavBar";
 import ContactForm from "./Components/ContactForm";
-import test from "../public/original-2318e0505fd14e368d00c6ee584788c5.webp"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -48,16 +37,14 @@ export default function Home() {
       } else {
         setShowNavbar(false);
       }
-
       setPrevScrollPos(currentScrollPos);
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPos]);
+
 
   const handleScroll = (ref) => {
     window.scrollTo({
@@ -66,8 +53,6 @@ export default function Home() {
       behavior: "smooth",
     });
   };
-
-
 
   return (
 
@@ -110,10 +95,11 @@ export default function Home() {
               </a>
             </div>
             <div ref={aboutMeRef} className="w-40 h-40 mx-auto bg-gradient-to-b from-teal-500 rounded-full relative overflow-hidden mt-20   md:h-96 md:w-96">
-              <Image src={deved} alt={'project displayed'} layout="fill" objectFit="cover" />
+              <Image src={deved} alt={'project displayed'} width={300} height={300} layout="fill" objectFit="cover" />
             </div>
           </div>
         </section>
+
         <section className="mb-24 lg:flex">
           <div className="lg:w-2/3 mlax-w-2x">
             <h3 className="text-3xl py-1 text-center lg:text-left  dark:text-white ">About Me</h3>
@@ -159,6 +145,7 @@ export default function Home() {
               liveLink={'https://imaginative-sfogliatella-45400a.netlify.app/'}
               gitHubFront={'https://github.com/David-McCaig/parts-bin-client'}
               gitHubBack={'https://github.com/David-McCaig/parts-bin-server'}
+              altTag={'Preview of partsBin project displayed on a computer screen with a greenish background'}
             >
               <SkillsTag skill={'React'} />
               <SkillsTag skill={'SASS'} />
@@ -177,6 +164,8 @@ export default function Home() {
               liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
               gitHubFront={'https://github.com/David-McCaig/david-mccaig-brainflix'}
               gitHubBack={'https://github.com/David-McCaig/david-mccaig-brainflix-server'}
+              liveLinkRemove={'mr-1.5'}
+              altTag={'Preview of BrainFlix project displayed on a computer screen with a greenish background'}
             >
               <SkillsTag skill={'HTML'} />
               <SkillsTag skill={'Javascript'} />
@@ -191,9 +180,11 @@ export default function Home() {
               image={inStock}
               title={'InStock'}
               description={'Instock is a warehouse and inventory management system that was built in a week by a team of four developers using Agile work flows (Jira) and GitFlow. Every morning we would have a stand-up to mimic a work environment. I really enjoyed working with Jira, gitFLow and Scrum methodologies. It really allowed us to take a project that felt daunting at the time and break it down into more manageable bite sized pieces. Instock is a fully responsive full-stack web application.'}
-              liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
+              liveLink={'https://dancing-croissant-6b58eb.netlify.app/'}
               gitHubFront={'https://github.com/David-McCaig/instock-client'}
               gitHubBack={'https://github.com/David-McCaig/instock-api'}
+              liveLinkRemove={'mr-1.5'}
+              altTag={'Preview of inStock project displayed on a computer screen with a greenish background'}
             >
               <SkillsTag skill={'HTML'} />
               <SkillsTag skill={'Javascript'} />
@@ -208,9 +199,10 @@ export default function Home() {
               image={getOut}
               title={'Get Out'}
               description={'During a 24-hour Hackathon at the Brainstation Web Development Bootcamp, our team, composed of two UX designers, one Data Scientist, and two Web Developers, set out to revamp LoyaltyOne\'s Air Miles reward program for Millennials and Gen Z. Our solution? An engaging application that gamifies the experience using a star balance to track progress. We made earning and redeeming points a breeze with a user-friendly digital wallet earning us 2nd place in the competition.If you\'d like to check out our project, please make sure to view it in a width of 390px for the best experience.'}
-              liveLink={'https://elegant-meringue-56d20b.netlify.app/'}
-              gitHubFront={'https://github.com/David-McCaig/instock-client'}
-              gitHubBack={'https://github.com/David-McCaig/instock-api'}
+              gitHubFront={'https://github.com/michaelshimeles/get-out'}
+              gitHubbackRemove={'hidden'}
+              liveLinkRemove={'hidden'}
+              altTag={'Preview of getOut project displayed on a computer screen with a greenish background'}
             >
               <SkillsTag skill={'React.JS'} />
               <SkillsTag skill={'Javascript'} />
@@ -227,89 +219,6 @@ export default function Home() {
                 <AiOutlineArrowUp className="text-4xl ml-1.5" />
               </button>
             </div>
-            {/* <div className="basis-2/3 flex-1 ">
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={design} width={100} height={100} />
-                <h3 className="text-lg font-medium pt-8 pb-2  ">
-                  Beautiful Designs
-                </h3>
-                <p className="py-2">
-                  Creating elegant designs suited for your needs following core
-                  design theory.
-                </p>
-                <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-                <p className="text-gray-800 py-1">Photoshop</p>
-                <p className="text-gray-800 py-1">Illustrator</p>
-                <p className="text-gray-800 py-1">Figma</p>
-                <p className="text-gray-800 py-1">Indesign</p>
-              </div>
-            </div> */}
-
-            {/* <div className="basis-2/3 flex-1 ">
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={design} width={100} height={100} />
-                <h3 className="text-lg font-medium pt-8 pb-2  ">
-                  Beautiful Designs
-                </h3>
-                <p className="py-2">
-                  Creating elegant designs suited for your needs following core
-                  design theory.
-                </p>
-                <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-                <p className="text-gray-800 py-1">Photoshop</p>
-                <p className="text-gray-800 py-1">Illustrator</p>
-                <p className="text-gray-800 py-1">Figma</p>
-                <p className="text-gray-800 py-1">Indesign</p>
-              </div>
-            </div> */}
-
-            {/* <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web2}
-              />
-            </div> */}
-            {/* 
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web3}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web4}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web5}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web6}
-              />
-            </div> */}
-
 
           </div>
         </section>

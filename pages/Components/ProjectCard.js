@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import design from "../../public/design.png";
 import Image from "next/image";
-import SkillsTag from './SkillsTag';
+
 import {
-    AiFillLinkedin,
     AiFillGithub,
     AiFillIeCircle
 } from "react-icons/ai";
 
-function ProjectCard({ image, title, description, children, liveLink, gitHubFront, gitHubBack }) {
+function ProjectCard({ image, title, description, children, liveLink, gitHubFront, gitHubBack, gitHubbackRemove, liveLinkRemove, altTag }) {
 
 
     return (
 
         <div className="text-center shadow-xl m-4 rounded-xl my-10 dark:bg-white flex-1 xl:flex ">
             <div className="xl:w-2/3 mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]">
-                <Image className='rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]' src={image} />
+                <Image className='rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]' width={1000} height={1000} src={image} alt={altTag}/>
             </div>
             <div className="xl:w-2/3 px-4 md:px-12 flex flex-col xl:justify-center">
                 <h3 className="text-xl font-semibold pt-8 pb-2 tracking-widest">
@@ -26,7 +24,7 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
                 </p>
                 <div>
                     <div className=" text-5xl flex justify-center gap-2 sm:gap-6 py-3 font-semibold text-gray-600  ">
-                        <a className="mr-1" href={liveLink} target="_blank" rel="noreferrer">
+                        <a className={liveLinkRemove} href={liveLink} target="_blank" rel="noreferrer">
                             <AiFillIeCircle className="hover:text-emerald-500 transition duration-300" />
                             <p className="text-sm mt-1 text-gray-400 dark:text-gray-600"> Live </p>
                         </a>
@@ -34,7 +32,7 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
                             <AiFillGithub className='ml-2 hover:text-emerald-500 transition duration-300' />
                             <p className="text-sm mt-1 text-gray-400 dark:text-gray-600">Front-End</p>
                         </a>
-                        <a href={gitHubBack} target="_blank" rel="noreferrer">
+                        <a className={gitHubbackRemove} href={gitHubBack} target="_blank" rel="noreferrer">
                             < AiFillGithub className="ml-2 hover:text-emerald-500 transition duration-300" />
                             <p className='text-sm mt-1 text-gray-400 dark:text-gray-600'>Back-End</p>
                         </a>

@@ -1,10 +1,6 @@
 import React from 'react'
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, } from '@heroicons/react/24/outline'
-import { DiffieHellmanGroup } from 'crypto';
-
 function NavBar({ setDarkMode , handleScroll, aboutMeRef, projectRef, contactRef }) {
 
   const navigation = [
