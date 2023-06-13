@@ -13,7 +13,7 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
 
         <div className="text-center shadow-xl m-4 rounded-xl my-10 dark:bg-white flex-1 xl:flex ">
             <div className="xl:w-2/3 mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]">
-                <Image className='rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]' width={1000} height={1000} src={image} alt={altTag}/>
+                <Image className='rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]'  src={image} alt={altTag}/>
             </div>
             <div className="xl:w-2/3 px-4 md:px-12 flex flex-col xl:justify-center">
                 <h3 className="text-xl font-semibold pt-8 pb-2 tracking-widest">
