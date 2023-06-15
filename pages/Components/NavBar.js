@@ -3,13 +3,6 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 
 function NavBar({ setDarkMode , handleScroll, aboutMeRef, projectRef, contactRef }) {
 
-  const navigation = [
-    { name: 'Bikes', href: '/bikes', current: false },
-    { name: 'Components', href: '/components', current: false },
-    { name: 'Post Add', href: '/upload', current: false },
-  ]
-
-
   return (
     <>
       <nav className="pt-2 mb-10 dark:text-white">
