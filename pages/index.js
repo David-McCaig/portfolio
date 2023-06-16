@@ -48,7 +48,7 @@ export default function Home() {
 
   const handleScroll = (ref) => {
     window.scrollTo({
-      top: ref.offsetTop + -70,
+      top: ref.offsetTop + -64,
       left: 0,
       behavior: "smooth",
     });
@@ -72,12 +72,12 @@ export default function Home() {
 
       </div>
       <div className=""></div>
-      <main className=" bg-stone-50 px-10 dark:bg-gray-900 md:px-40 lg:px-32 xl:px-24 2xl:px-44">
+      <main className="pt-6 md:pt-0 bg-stone-50 px-12 dark:bg-gray-900 md:px-40 lg:px-32 xl:px-24 2xl:px-44">
 
-        <section className="mb-24 lg:mb-40 ">
+        <section className="mb-6 md:mb-0 ">
 
-          <div className="text-center md:p-10 md:py-10">
-            <h2 className="text-5xl py-2 pt-12 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl">
+          <div className="text-center  md:py-10">
+            <h2 className="text-5xl py-2 pt-12 md:pt-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl">
               David McCaig
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
@@ -86,7 +86,7 @@ export default function Home() {
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               I&#39;m a Full-Stack Developer with a love for creating beautiful UI and user-friendly applications.
             </p>
-            <div className="text-5xl flex justify-center gap-16 py-3  text-gray-600  dark:text-gray-400">
+            <div className="text-5xl flex justify-center gap-16 pt-3  text-gray-600  dark:text-gray-400">
               <a className="hover:text-emerald-600 transition duration-300 ease-in-out" href="https://www.linkedin.com/in/david-mccaig/" target="_blank" rel="noreferrer">
                 <AiFillLinkedin />
               </a>
@@ -94,21 +94,23 @@ export default function Home() {
                 <AiFillGithub />
               </a>
             </div>
-            <div ref={aboutMeRef} className="w-40 h-40 mx-auto bg-gradient-to-b from-teal-500 rounded-full relative overflow-hidden mt-20   md:h-96 md:w-96">
+            <div ref={aboutMeRef} className="w-40 h-40 mx-auto bg-gradient-to-b from-teal-500 rounded-full relative overflow-hidden mt-8 md:mt-10 md:h-96 md:w-96">
               <Image src={profilePhoto} alt={'project displayed'} priority={true} width={300} height={300} layout="fill" objectFit="cover" />
             </div>
           </div>
         </section>
 
-        <section className="mb-24 lg:flex">
-          <div className="lg:w-2/3 mlax-w-2x">
+        <div  className="  "> </div>
+
+        <section  className="mb-24 lg:flex lg:mb-48 lg:max-w-7xl lg:mx-auto">
+          <div  className="lg:w-2/3 mlax-w-2x">
             <h3 className="text-3xl py-1 text-center lg:text-left  dark:text-white ">About Me</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I am a bike shop owner turned Web Developer with a passion for creating beautiful UI. I am an analytical problem solver at heart, with 8 years of experience working collaboratively to overcome challenges and build an inclusive and thriving business. I am excited to leverage my passion for technical problem solving, attention to detail and creative mind towards writing clean and efficient code. When I&#39;m not coding you can usually find me mountain biking in the Port Hills or making music with my collection of Synthesizers and drum machines.
             </p>
           </div>
           <div className="md:w-16"></div>
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 mt-0 md:py-8 lg:py-0">
             <h3 className="text-3xl py-1 justify-center lg:justify-start dark:text-white flex ">My Skills</h3>
             <div className=" flex flex-wrap justify-center md:justify-start">
               <SkillsTag skill={'HTML'} />
@@ -132,11 +134,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section ref={projectRef} className="py-10">
+        <section ref={projectRef} className="">
           <div>
-            <h3 className="text-3xl py-1 text-center dark:text-white ">Projects</h3>
+            <h3 className="text-3xl md:py-1 md:mb-2 text-center dark:text-white ">Projects</h3>
           </div>
-          <div className="flex flex-col gap-10 py-10 ">
+          <div className="flex flex-col gap-10 py-4 ">
 
             <ProjectCard
               image={partsBin}

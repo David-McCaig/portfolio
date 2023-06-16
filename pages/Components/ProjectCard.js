@@ -11,7 +11,7 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
 
     return (
 
-        <div className="text-center shadow-xl m-4 rounded-xl my-10 dark:bg-white flex-1 xl:flex ">
+        <div className="text-center shadow-xl m-4 rounded-xl dark:bg-white flex-1 xl:flex ">
             <div className="xl:w-2/3 mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]">
                 <Image className='rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]'  src={image} alt={altTag}/>
             </div>
@@ -19,7 +19,7 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
                 <h3 className="text-xl font-semibold pt-8 pb-2 tracking-widest">
                     {title}
                 </h3>
-                <p className="py-2 text-sm md:text-base">
+                <p className="py-2 text-sm md:text-base lg:max-w-2xl lg:mx-auto">
                     {description}
                 </p>
                 <div>
@@ -38,7 +38,7 @@ function ProjectCard({ image, title, description, children, liveLink, gitHubFron
                         </a>
                     </div>
                     <h4 className="py-4 text-emerald-500 text-xl font-medium mt-1 ">Technologies</h4>
-                    <div className="flex flex-wrap justify-center pb-4 md:pb-16 lg:pb-8">
+                    <div className="flex flex-wrap justify-center pb-4 md:pb-16 lg:max-w-lg lg:mx-auto lg:pb-8">
                         {children}
                     </div>
                 </div>
