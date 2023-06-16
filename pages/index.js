@@ -212,11 +212,11 @@ export default function Home() {
               <SkillsTag skill={'CSS'} />
               <SkillsTag skill={'SASS'} />
             </ProjectCard>
-            <div ref={contactRef} className="mt-24 lg:mt-44 lg:mb-8 flex justify-center ">
+            <div ref={contactRef} className="mt-32  lg:mt-44 lg:mb-8 flex justify-center ">
               <ContactForm />
             </div>
 
-            <div className="flex justify-center align-middle mt-4 lg:mt-0 ">
+            <div className="flex justify-center align-middle mb-44 mt-4 lg:mt-0 ">
               <button className="bg-gray-900 text-gray-50 w-12 h-12 rounded-full justify-center hover:bg-gray-700 dark:text-gray-900 dark:bg-gray-50 dark:hover:text-gray-700 " onClick={() => handleScroll(scrollTop.current)} >
                 <AiOutlineArrowUp className="text-4xl ml-1.5" />
               </button>
