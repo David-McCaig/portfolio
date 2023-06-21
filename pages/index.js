@@ -22,6 +22,7 @@ export default function Home() {
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  
 
   const scrollTop = useRef(null);
   const aboutMeRef = useRef(null);
