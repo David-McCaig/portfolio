@@ -81,7 +81,7 @@ export default function Home() {
 
       </div>
       <div className=""></div>
-      <main className="pt-6 md:pt-0 bg-stone-50 px-12 dark:bg-gray-900 md:px-40 lg:px-32 xl:px-24 2xl:px-44">
+      <main className="pt-6 md:pt-0 bg-stone-50 px-12 dark:bg-gray-900 md:px-20 lg:px-32 xl:px-24 2xl:px-44">
 
         <section className="mb-6 md:mb-0 ">
 
@@ -131,9 +131,9 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-16"></div>
-          <div className="lg:w-2/3 mt-0 md:py-8 lg:py-0">
-            <h3 className="text-3xl py-1 justify-center lg:justify-start dark:text-white flex ">My Skills</h3>
-            <div className=" flex flex-wrap justify-center md:justify-start">
+          <div className="lg:w-2/3 mt-0 md:py-8 lg:py-0 md:w-[37.5rem] m-auto ">
+            <h3 className="text-3xl py-1 justify-center lg:ml-1 lg:justify-start dark:text-white flex ">My Skills</h3>
+            <div className=" flex flex-wrap justify-center md:m-auto  md:justify-start">
               <SkillsTag skill={'HTML'} />
               <SkillsTag skill={'CSS'} />
               <SkillsTag skill={'JavaScript'} />
