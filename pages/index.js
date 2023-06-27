@@ -12,10 +12,10 @@ import partsBin from "../public/parts-bin.png"
 import BrainFlix from "../public/brain-flix.png"
 import inStock from "../public/in-stock.png"
 import getOut from "../public/get-out.png"
-import SkillsTag from "./Components/SkillsTag";
-import ProjectCard from "./Components/ProjectCard";
-import NavBar from "./Components/NavBar";
-import ContactForm from "./Components/ContactForm";
+import SkillsTag from "../Components/SkillsTag";
+import ProjectCard from "../Components/ProjectCard";
+import NavBar from "../Components/NavBar";
+import ContactForm from "../Components/ContactForm";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
