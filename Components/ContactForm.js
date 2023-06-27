@@ -66,8 +66,8 @@ const SignupForm = () => {
     return (
         <form className="flex flex-col w-96 lg:w-[36rem]" ref={formRef} onSubmit={formik.handleSubmit}>
             <div className='text-center'>
-            <h1 className="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900 dark:text-white">Contact Me</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 mb-4 dark:text-white">Please dont hesitate to reach out if you have any questions</p>
+            <h1 className="text-2xl font-semibold title-font mb-4 text-gray-900 sm:text-3xl dark:text-white">Contact Me</h1>
+            <p className="mx-auto leading-relaxed text-base text-gray-500 mb-4 lg:w-2/3 dark:text-white">Please dont hesitate to reach out if you have any questions</p>
             </div>
             <label className="mb-1 mt-5 dark:text-white" htmlFor="user_name">Name</label>
             <input
