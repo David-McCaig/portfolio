@@ -23,6 +23,7 @@ function AboutMe() {
                     <SkillsTag skill={'React'} />
                     <SkillsTag skill={'NextJS'} />
                     <SkillsTag skill={'SASS'} />
+                    <SkillsTag skill={'Tailwind'} />
                     <SkillsTag skill={'GIT'} />
                     <SkillsTag skill={'Github'} />
                     <SkillsTag skill={'Gitflow'} />

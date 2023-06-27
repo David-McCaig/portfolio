@@ -3,7 +3,7 @@ import {
     AiFillLinkedin,
     AiFillGithub,
   } from "react-icons/ai";
-import profilePhoto from "../public/david-mccaig.png";
+import profilePhoto from "../public/david-mccaig_cropped.png";
 import Image from "next/image";
 
 function IntroSection({isActive, handleClick, handleMouseLeave, aboutMeRef}) {
