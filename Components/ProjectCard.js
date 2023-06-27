@@ -32,10 +32,10 @@ function ProjectCard({
     return (
 
         <div className="text-center shadow-xl m-4 rounded-xl dark:bg-white flex-1 xl:flex ">
-            <div className="xl:w-2/3 mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]">
+            <div className="mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9] xl:w-2/3">
                 <Image className='rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]' src={image} alt={altTag} />
             </div>
-            <div className="xl:w-2/3 px-4 md:px-12 flex flex-col xl:justify-center">
+            <div className="px-4 md:px-12 flex flex-col xl:justify-center xl:w-2/3">
                 <h3 className="text-xl font-semibold pt-8 pb-2 tracking-widest">
                     {title}
                 </h3>
