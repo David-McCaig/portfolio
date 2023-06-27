@@ -1,7 +1,5 @@
 import Head from "next/head";
 import {
-  AiFillLinkedin,
-  AiFillGithub,
   AiOutlineArrowUp
 } from "react-icons/ai";
 
