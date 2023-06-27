@@ -10,12 +10,12 @@ import partsBin from "../public/parts-bin.png"
 import BrainFlix from "../public/brain-flix.png"
 import inStock from "../public/in-stock.png"
 import getOut from "../public/get-out.png"
-import IntroSection from "../Components/IntroSection";
-import AboutMe from "../Components/AboutMe";
-import SkillsTag from "../Components/SkillsTag";
-import ProjectCard from "../Components/ProjectCard";
-import NavBar from "../Components/NavBar";
-import ContactForm from "../Components/ContactForm";
+import IntroSection from "./Components/IntroSection";
+import AboutMe from "./Components/AboutMe";
+import SkillsTag from "./Components/SkillsTag";
+import ProjectCard from "./Components/ProjectCard";
+import NavBar from "./Components/NavBar";
+import ContactForm from "./Components/ContactForm";
 
 export default function Home() {
   
