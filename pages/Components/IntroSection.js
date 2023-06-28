@@ -9,7 +9,7 @@ import Image from "next/image";
 function IntroSection({isActive, handleClick, handleMouseLeave, aboutMeRef}) {
   
     return (
-    <section className="mb-6 md:mb-0 bg-stone-50 dark:bg-gray-900">
+    <section className="pb-6 pt-4 md:mb-0 bg-stone-50 dark:bg-gray-900">
 
     <div className="text-center  md:py-10">
       <h2 className="text-5xl py-2 pt-12 md:pt-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-300 dark:text-emerald-400 md:text-6xl">
