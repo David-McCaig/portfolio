@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { useSpring, animated } from "@react-spring/web";
-
 import { AiFillGithub, AiFillIeCircle } from "react-icons/ai";
 
 function ProjectCard({
@@ -26,20 +24,7 @@ function ProjectCard({
     setIsActive(false);
   };
 
-  const [props] = useSpring(
-    () => ({
-      from: { y: 20, opacity: 0 },
-      to: { y: 0, opacity: 1 },
-      config: { duration: 600 },
-    }),
-    []
-  );
-  
-  
-  
-
   return (
-    <animated.div style={props} className="bg-stone-50">
       <div className="text-center shadow-xl m-4 rounded-xl dark:bg-white flex-1 xl:flex ">
         <div className="mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9] xl:w-2/3">
           <Image
@@ -124,7 +109,6 @@ function ProjectCard({
           </div>
         </div>
       </div>
-    </animated.div>
   );
 }
 

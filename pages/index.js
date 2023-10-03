@@ -14,6 +14,7 @@ import SkillsTag from "./Components/SkillsTag";
 import ProjectCard from "./Components/ProjectCard";
 import NavBar from "./Components/NavBar";
 import ContactForm from "./Components/ContactForm";
+import { motion, useInView } from "framer-motion";
 
 export default function Home() {
   
@@ -62,6 +63,13 @@ export default function Home() {
     });
   };
 
+  const animateRef = useRef(null);
+  const isInView = useInView(animateRef, { once: true });
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
 
     <div className={darkMode ? "dark" : ""}>
@@ -95,7 +103,13 @@ export default function Home() {
           <div>
             <h3 className="text-3xl md:py-1 md:mb-2 text-center dark:text-white ">Projects</h3>
           </div>
-          <div className="flex flex-col gap-10 py-4 ">
+          <motion.div
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: 0.4 }}
+          >
+          <div ref={animateRef} className="flex flex-col gap-10 py-4 ">
 
             <ProjectCard
               isActive={isActive}
@@ -117,7 +131,7 @@ export default function Home() {
               <SkillsTag skill={'Socket.IO'} />
               <SkillsTag skill={'Cloudinary'} />
             </ProjectCard>
-
+           
             <ProjectCard
               isActive={isActive}
               image={BrainFlix}
@@ -174,6 +188,7 @@ export default function Home() {
               <SkillsTag skill={'CSS'} />
               <SkillsTag skill={'SASS'} />
             </ProjectCard>
+            
             <div ref={contactRef} className="mt-32  lg:mt-44 lg:mb-8 flex justify-center ">
               <ContactForm />
             </div>
@@ -185,6 +200,7 @@ export default function Home() {
             </div>
 
           </div>
+          </motion.div>
         </section>
       </main>
     </div>

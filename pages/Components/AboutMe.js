@@ -1,19 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 import SkillsTag from "./SkillsTag";
-import { useSpring, animated } from "@react-spring/web";
 
 function AboutMe() {
-  const [props] = useSpring(
-    () => ({
-      from: { y: 20, opacity: 0 },
-      to: { y: 0, opacity: 1 },
-      config: { duration: 600 },
-    }),
-    []
-  );
 
   return (
-    <animated.div style={props} className="bg-stone-50">
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+  >
       <section className="mb-24 lg:flex lg:mb-48 lg:max-w-7xl lg:mx-auto">
         <div className="mlax-w-2x lg:w-2/3">
           <h3 className="text-3xl py-1 text-center lg:text-left  dark:text-white ">
@@ -59,7 +56,7 @@ function AboutMe() {
           </div>
         </div>
       </section>
-    </animated.div>
+      </motion.div>
   );
 }
 

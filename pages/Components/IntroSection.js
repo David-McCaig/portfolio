@@ -1,6 +1,5 @@
 import React from 'react'
-import { useSpring, animated } from '@react-spring/web'
-
+import { motion } from "framer-motion";
 import {
     AiFillLinkedin,
     AiFillGithub,
@@ -9,20 +8,15 @@ import profilePhoto from "../../public/david-mccaig_cropped.png";
 import Image from "next/image";
 
 function IntroSection({isActive, handleClick, handleMouseLeave, aboutMeRef}) {
-  const [props] = useSpring(
-    () => ({
-      from: { y: 20, opacity: 0 },
-      to: { y: 0, opacity: 1 },
-      config: { duration: 600 },
-    }),
-    []
-  );
+
     return (
       <section className="pb-6 pt-4 md:mb-0 bg-stone-50 dark:bg-gray-900">
-      <animated.div
-      style={props}
-      className="bg-stone-50"
-   >
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
     
 
     <div className="text-center  md:py-10">
@@ -60,7 +54,7 @@ function IntroSection({isActive, handleClick, handleMouseLeave, aboutMeRef}) {
       </div>
     </div>
  
-  </animated.div>
+    </motion.div>
   </section>
   )
 }
