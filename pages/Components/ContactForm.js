@@ -75,8 +75,7 @@ const SignupForm = () => {
           Contact Me
         </h1>
         <p className="mx-auto leading-relaxed text-base text-gray-500 mb-4 lg:w-2/3 dark:text-white">
-          Please dont hesitate to reach out if you have any questions
-        </p>
+        I&apos;m currently seeking new opportunities, my inbox is always open. Whether you have a question or just want to say hi, please don&apos;t hesitate to reach out.        </p>
       </div>
       <label className="mb-1 mt-5 dark:text-white" htmlFor="user_name">
         Name
