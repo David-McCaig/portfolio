@@ -12,10 +12,11 @@ function IntroSection({isActive, handleClick, handleMouseLeave, aboutMeRef}) {
   const [props] = useSpring(
     () => ({
       from: { y: 20, opacity: 0 },
-      to: { y:0, opacity: 1 },
+      to: { y: 0, opacity: 1 },
+      config: { duration: 600 },
     }),
     []
-  )
+  );
     return (
       <section className="pb-6 pt-4 md:mb-0 bg-stone-50 dark:bg-gray-900">
       <animated.div

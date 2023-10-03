@@ -30,9 +30,13 @@ function ProjectCard({
     () => ({
       from: { y: 20, opacity: 0 },
       to: { y: 0, opacity: 1 },
+      config: { duration: 600 },
     }),
     []
   );
+  
+  
+  
 
   return (
     <animated.div style={props} className="bg-stone-50">
