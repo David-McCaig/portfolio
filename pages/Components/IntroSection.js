@@ -14,7 +14,7 @@ function IntroSection({isActive, handleClick, handleMouseLeave, aboutMeRef}) {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
     
@@ -49,7 +49,7 @@ function IntroSection({isActive, handleClick, handleMouseLeave, aboutMeRef}) {
           <AiFillGithub />
         </a>
       </div>
-      <div ref={aboutMeRef} className="w-48 h-48 mx-auto bg-gradient-to-b from-teal-500 rounded-full relative overflow-hidden mt-8 md:mt-10 sm: md:h-96 md:w-96">
+      <div ref={aboutMeRef} className="w-48 h-48 mx-auto rounded-full relative overflow-hidden mt-8 md:mt-10 sm: md:h-96 md:w-96">
         <Image src={profilePhoto} alt={'project displayed'} layout="fill" objectFit="cover" />
       </div>
     </div>
