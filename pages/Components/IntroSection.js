@@ -17,7 +17,7 @@ function IntroSection({ isActive, handleClick, handleMouseLeave, aboutMeRef }) {
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: .4 }}
+      transition={{ duration: 0.5, delay: .7 }}
       className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
     >
         <div className="text-center  md:py-10">
