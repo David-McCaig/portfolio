@@ -8,7 +8,7 @@ function AboutMe() {
     <motion.div
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
+    transition={{ duration: 0.5, delay: .4 }}
     className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
   >
       <section className="mb-24 lg:flex lg:mb-48 lg:max-w-7xl lg:mx-auto">
