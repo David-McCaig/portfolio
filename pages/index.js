@@ -99,7 +99,7 @@ export default function Home() {
         aboutMeRef={aboutMeRef}
       />
 
-      <main className="pt-6 md:pt-0 bg-stone-50 px-12 dark:bg-gray-900 md:px-20 lg:px-32 xl:px-24 2xl:px-44">
+      <main className="pt-6 md:pt-0 bg-stone-50 px-4 dark:bg-gray-900 md:px-20 lg:px-32 xl:px-24 2xl:px-44">
         <AboutMe />
 
         <section ref={projectRef} className="">
