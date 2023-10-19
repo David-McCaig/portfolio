@@ -152,7 +152,9 @@ export default function Home() {
                 }
                 gitHubFront={"https://github.com/David-McCaig/even-share"}
                 gitHubbackRemove={"hidden"}
-                liveLinkRemove={"hidden"}
+                liveLink={
+                  "https://split-bill-427e2.web.app/login"
+                }
                 altTag={
                   "Preview of EvenShare project displayed on a computer screen with a greenish background"
                 }
@@ -161,6 +163,8 @@ export default function Home() {
                 <SkillsTag skill={"React"} />
                 <SkillsTag skill={"Redux"} />
                 <SkillsTag skill={"Tailwind"} />
+                <SkillsTag skill={"Formik"} />
+                <SkillsTag skill={"Chart.js"} />
                 <SkillsTag skill={"Shadcn/ui"} />
                 <SkillsTag skill={"Firebase"} />
               </ProjectCard>
