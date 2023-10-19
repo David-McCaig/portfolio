@@ -115,6 +115,34 @@ export default function Home() {
             transition={{ duration: 0.3, delay: 0.4 }}
           >
             <div ref={animateRef} className="flex flex-col gap-10 py-4 ">
+
+            <ProjectCard
+                isActive={isActive}
+                setIsActive={setIsActive}
+                image={evenshare}
+                title={"EvenShare"}
+                description={
+                  "EvenShare is a user-friendly application designed to streamline the process of splitting expenses with others. Users have the flexibility to create groups by simply adding the email addresses of their family or friends. Upon receiving an email invitation to join EvenShare, family and friends can easily sign up and become part of the group. The app leverages the power of RTK Query, which not only optimizes performance by caching data but also minimizes data requests to Firebase.To further enhance user experience, pagination has been implemented, reducing page loading times and minimizing the amount of data fetched from Firebase. "
+                }
+                gitHubFront={"https://github.com/David-McCaig/even-share"}
+                gitHubbackRemove={"hidden"}
+                liveLink={
+                  "https://split-bill-427e2.web.app/login"
+                }
+                altTag={
+                  "Preview of EvenShare project displayed on a computer screen with a greenish background"
+                }
+              >
+                <SkillsTag skill={"TypeScript"} />
+                <SkillsTag skill={"React"} />
+                <SkillsTag skill={"Redux"} />
+                <SkillsTag skill={"Tailwind"} />
+                <SkillsTag skill={"Formik"} />
+                <SkillsTag skill={"Chart.js"} />
+                <SkillsTag skill={"Shadcn/ui"} />
+                <SkillsTag skill={"Firebase"} />
+              </ProjectCard>
+              
               <ProjectCard
                 isActive={isActive}
                 setIsActive={setIsActive}
@@ -140,33 +168,6 @@ export default function Home() {
                 <SkillsTag skill={"MYSQL"} />
                 <SkillsTag skill={"Socket.IO"} />
                 <SkillsTag skill={"Cloudinary"} />
-              </ProjectCard>
-
-              <ProjectCard
-                isActive={isActive}
-                setIsActive={setIsActive}
-                image={evenshare}
-                title={"EvenShare"}
-                description={
-                  "EvenShare is a user-friendly application designed to streamline the process of splitting expenses with others. Users have the flexibility to create groups by simply adding the email addresses of their family or friends. Upon receiving an email invitation to join EvenShare, family and friends can easily sign up and become part of the group. The app leverages the power of RTK Query, which not only optimizes performance by caching data but also minimizes data requests to Firebase.To further enhance user experience, pagination has been implemented, reducing page loading times and minimizing the amount of data fetched from Firebase. "
-                }
-                gitHubFront={"https://github.com/David-McCaig/even-share"}
-                gitHubbackRemove={"hidden"}
-                liveLink={
-                  "https://split-bill-427e2.web.app/login"
-                }
-                altTag={
-                  "Preview of EvenShare project displayed on a computer screen with a greenish background"
-                }
-              >
-                <SkillsTag skill={"TypeScript"} />
-                <SkillsTag skill={"React"} />
-                <SkillsTag skill={"Redux"} />
-                <SkillsTag skill={"Tailwind"} />
-                <SkillsTag skill={"Formik"} />
-                <SkillsTag skill={"Chart.js"} />
-                <SkillsTag skill={"Shadcn/ui"} />
-                <SkillsTag skill={"Firebase"} />
               </ProjectCard>
 
               <ProjectCard
