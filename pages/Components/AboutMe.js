@@ -17,7 +17,7 @@ function AboutMe() {
             About Me
           </h3>
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-            I am a bike shop owner turned Web Developer with a passion for
+            I am a bike shop owner turned Full-Stack Developer with a passion for
             creating beautiful UI. I am an analytical problem solver at heart,
             with 8 years of experience working collaboratively to overcome
             challenges and build an inclusive and thriving business. I am
