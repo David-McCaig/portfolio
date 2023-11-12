@@ -36,6 +36,7 @@ function AboutMe() {
           </h3>
           <div className="flex flex-wrap justify-center md:m-auto  md:justify-start">
             <SkillsTag skill={"React"} />
+            <SkillsTag skill={"Next.js"} />
             <SkillsTag skill={"TypeScript"} />
             <SkillsTag skill={"JavaScript"} />
             <SkillsTag skill={"HTML"} />
