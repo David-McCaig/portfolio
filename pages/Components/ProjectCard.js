@@ -25,7 +25,7 @@ function ProjectCard({
   };
 
   return (
-      <div className="text-center shadow-xl m-4 rounded-xl dark:bg-white flex-1 xl:flex ">
+      <div className="text-center shadow-xl m-4 md:m-0 rounded-xl dark:bg-white flex-1 xl:flex ">
         <div className="mlax-w-2x xl:flex items-center rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9] xl:w-2/3">
           <Image
             className="rounded-xl bg-[#CACFC9] border-0 border-[#CACFC9]"
