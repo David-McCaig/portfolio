@@ -127,7 +127,7 @@ export default function Home() {
                 gitHubFront={"https://github.com/David-McCaig/even-share"}
                 gitHubbackRemove={"hidden"}
                 liveLink={
-                  "https://split-bill-427e2.web.app/login"
+                  "https://split-bill-427e2.web.app"
                 }
                 altTag={
                   "Preview of EvenShare project displayed on a computer screen with a greenish background"
