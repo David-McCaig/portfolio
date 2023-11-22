@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 import SkillsTag from "./SkillsTag";
 
 function AboutMe() {
-
   return (
     <motion.div
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: .7 }}
+    transition={{ duration: 0.5, delay: .4 }}
     className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
   >
       <section className="mb-24 lg:flex lg:mb-48 lg:max-w-7xl lg:mx-auto">
@@ -35,6 +34,7 @@ function AboutMe() {
             My Skills
           </h3>
           <div className="flex flex-wrap justify-center md:m-auto  md:justify-start">
+            <SkillsTag skill={"Angular"} />
             <SkillsTag skill={"React"} />
             <SkillsTag skill={"Next.js"} />
             <SkillsTag skill={"TypeScript"} />
@@ -57,7 +57,7 @@ function AboutMe() {
           </div>
         </div>
       </section>
-      </motion.div>
+    </motion.div>
   );
 }
 
