@@ -44,6 +44,7 @@ function IntroSection({ isActive, handleClick, handleMouseLeave, aboutMeRef }) {
               target="_blank"
               rel="noreferrer"
             >
+              <span className="sr-only">LinkedIn:</span>
               <AiFillLinkedin />
             </a>
             <a
@@ -59,6 +60,7 @@ function IntroSection({ isActive, handleClick, handleMouseLeave, aboutMeRef }) {
               rel="noreferrer"
             >
               <AiFillGithub />
+              <span className="sr-only">GitHub:</span>
             </a>
           </div>
           <div
