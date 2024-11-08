@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai/index.js";
 import profilePhoto from "../../public/david-mccaig_cropped.png";
 import Image from "next/image";
 
@@ -13,7 +13,7 @@ function IntroSection({ isActive, handleClick, handleMouseLeave, aboutMeRef }) {
   }, []);
 
   return (
-    <section className="pb-6 pt-4 md:mb-0 bg-stone-50 dark:bg-gray-900">
+    <section className="pb-6 pt-12 md:mb-0 bg-stone-50 dark:bg-gray-900 flex justify-center  align-middle">
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       animate={isLoaded ? { opacity: 1, y: 0 } : {}}

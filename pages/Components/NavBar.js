@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill } from "react-icons/bs/index.js?";
 
 function NavBar({
   setDarkMode,

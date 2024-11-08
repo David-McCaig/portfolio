@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { AiFillGithub, AiFillIeCircle } from "react-icons/ai";
+import { AiFillGithub, AiFillIeCircle } from "react-icons/ai/index.js";
 
 function ProjectCard({
   image,

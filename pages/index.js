@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import { AiOutlineArrowUp } from "react-icons/ai/index.js";
 
 import { useState, useEffect, useRef } from "react";
 import partsBin from "../public/parts-bin.png";
@@ -68,10 +68,13 @@ export default function Home() {
   };
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={darkMode ? "dark" : "bg-stone-50"}>
       <Head>
         <title>David McCaig</title>
-        <meta name="description" content="Full-Stack Developer and former bike shop owner passionate about creating beautiful UI. Experienced in collaborative problem-solving, with a focus on clean and efficient code. Enthusiast of mountain biking and music production." />
+        <meta
+          name="description"
+          content="Full-Stack Developer and former bike shop owner passionate about creating beautiful UI. Experienced in collaborative problem-solving, with a focus on clean and efficient code. Enthusiast of mountain biking and music production."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -92,13 +95,13 @@ export default function Home() {
         />
       </div>
 
-      <IntroSection
-        isActive={isActive}
-        handleClick={handleClick}
-        handleMouseLeave={handleMouseLeave}
-        aboutMeRef={aboutMeRef}
-      />
-
+        <IntroSection
+          isActive={isActive}
+          handleClick={handleClick}
+          handleMouseLeave={handleMouseLeave}
+          aboutMeRef={aboutMeRef}
+        />
+    
       <main className="pt-6 md:pt-0 bg-stone-50 px-4 dark:bg-gray-900 md:px-20 lg:px-12 xl:px-24 2xl:px-44">
         <AboutMe />
 
@@ -115,8 +118,7 @@ export default function Home() {
             transition={{ duration: 0.3, delay: 0.4 }}
           >
             <div ref={animateRef} className="flex flex-col gap-10 py-4 ">
-
-            <ProjectCard
+              <ProjectCard
                 isActive={isActive}
                 setIsActive={setIsActive}
                 image={evenshare}
@@ -127,9 +129,7 @@ export default function Home() {
                 gitHubFront={"https://github.com/David-McCaig/even-share"}
                 gitHubbackRemove={"hidden"}
                 gitHubBack={"https://github.com/David-McCaig/even-share"}
-                liveLink={
-                  "https://split-bill-427e2.web.app"
-                }
+                liveLink={"https://split-bill-427e2.web.app"}
                 altTag={
                   "Preview of EvenShare project displayed on a computer screen with a greenish background"
                 }
@@ -143,7 +143,7 @@ export default function Home() {
                 <SkillsTag skill={"Shadcn/ui"} />
                 <SkillsTag skill={"Firebase"} />
               </ProjectCard>
-              
+
               <ProjectCard
                 isActive={isActive}
                 setIsActive={setIsActive}
@@ -260,7 +260,6 @@ export default function Home() {
                   aria-label="Scroll to top"
                 >
                   <AiOutlineArrowUp className="text-4xl ml-1.5" />
-
                 </button>
               </div>
             </div>
